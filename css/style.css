@@ -3,7 +3,7 @@
 	display:block;
     background-color: grey;
 }
-div .findjob
+div .findatutor
 {
 	text-align: justify-all;
 	padding: 65px;
@@ -11,7 +11,7 @@ div .findjob
 	font-size: 20px;
 	color:white;
 }
-div .findjob input
+div .findatutor input
 {
     width: 400px;
     height: 50px;
@@ -19,7 +19,7 @@ div .findjob input
     color: black;
 
 }
-div .findjob button
+div .findatutor button
 {
 	height: 50px;
 	width: 50px;
