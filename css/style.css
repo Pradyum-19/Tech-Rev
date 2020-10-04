@@ -1,0 +1,166 @@
+body
+{
+	
+	margin:0;
+	padding:0;
+}
+		
+hr
+{
+	height: 10px;
+    background-color:black;
+    border: none;
+}
+
+a
+{
+	color:black;
+}
+
+/*p
+{
+	text-align: left;
+	font-color:white;
+	font-size:30px;
+}*/
+		
+h1
+{
+	font-family: "Times New Roman",times,series;
+	color: black;
+}
+
+h2
+{
+	text-align:center;
+	opacity: 0.8;
+	width:100%;
+	color:white;
+	font-size:35px;
+}
+
+header
+{
+	background:white;
+	opacity: 0.5;
+	padding:50px;
+	color:black;
+}
+		
+div
+{
+
+	font-family: "Times New Roman",times,series;
+	color: black;
+}
+
+.list a:hover
+{ 
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+
+section
+{
+	color:black;
+	text-align:left;
+	padding:100px;
+	display:flex;
+}
+		
+section p
+{
+	text-align:left;
+	width:35%;
+	color:black;	
+}
+		
+	    
+ul
+{
+	margin:0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li
+{
+	font-color:white;
+	display:inline-block;
+	margin-right: 20px;
+}
+
+li::before 
+{
+    color: red; 
+}
+
+img 
+{
+  	padding: 10px;
+  	width: 150px;
+}
+
+       
+article
+{ 
+	background-color:white;
+	opacity: 0.5;
+	padding:50px;
+}
+	
+.container 
+{
+	position: relative;
+  	max-width:400px; 
+  	margin: 0 auto;
+}
+
+.container .content 
+{
+  	position: absolute; 
+  	bottom: 0;
+  	background: rgb(0, 0, 0);
+  	background: rgb(0, 0, 0, 0.5); 
+  	color: white;
+  	font-size: 15px;
+  	width: 75%;
+}	
+
+table, th, td
+{
+	background-color: white;
+	opacity: 0.5;
+	border: 1px solid black;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	fo
+}
+
+.copyrights 
+{
+    color: #777; 
+}
+
+.copyrights a
+{ 
+	color: #dddddd;
+}
+
+.copyrights a:hover
+{ 
+	background-color: #777777;
+	color: #dddddd;
+	text-decoration: none;
+}
+
+footer
+{
+	clear: both;
+	background-color: black;
+	opacity: 0.5;
+	color: #666;
+}
+         
