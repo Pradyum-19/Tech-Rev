@@ -32,7 +32,7 @@ h2
 	opacity: 0.8;
 	width:100%;
 	color:white;
-	font-size:35px;
+	font-size:32px;
 }
 
 h4
@@ -88,17 +88,13 @@ ul
 	list-style-type: none;
 }
 
-li
+ul li
 {
 	font-color:white;
 	display:inline-block;
 	margin-right: 20px;
 }
 
-li::before 
-{
-    color: red; 
-}
 
 img 
 {
