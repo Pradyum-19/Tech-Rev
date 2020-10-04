@@ -1,3 +1,7 @@
+*
+{
+	font-family: Helvetica;
+}
 body
 {
 	
@@ -16,17 +20,9 @@ a
 {
 	color:black;
 }
-
-/*p
-{
-	text-align: left;
-	font-color:white;
-	font-size:30px;
-}*/
 		
 h1
 {
-	font-family: "Times New Roman",times,series;
 	color: black;
 }
 
@@ -37,6 +33,15 @@ h2
 	width:100%;
 	color:white;
 	font-size:35px;
+}
+
+h4
+{
+	text-align:center;
+	opacity: 0.8;
+	width:100%;
+	color:white;
+	font-size:25px;
 }
 
 header
@@ -50,7 +55,6 @@ header
 div
 {
 
-	font-family: "Times New Roman",times,series;
 	color: black;
 }
 
