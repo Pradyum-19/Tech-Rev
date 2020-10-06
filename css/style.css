@@ -18,12 +18,7 @@ hr
 
 a:link
 {
-	color:red;
-}
-
-a:visited
-{
-	color: black;
+	color:black;
 }
 		
 h1
@@ -68,6 +63,11 @@ div
 	background-color: black;
 	color: white;
 	text-decoration: none;
+}
+
+.list a:visited
+{
+	color: red;
 }
 
 section
