@@ -152,6 +152,26 @@ aside
   	padding: 20px;
 }
 
+.anim
+{
+  width: 100px;
+  height: 20px;
+  background-color: white;
+  position: relative;
+  animation-name: animation;
+  animation-duration: 10s;
+  text-align: center;
+}
+
+@keyframes animation 
+{
+  0%   {background-color:white; left:0px; top:0px;}
+  25%  {background-color:grey; left:600px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:grey; left:0px; top:200px;}
+  100% {background-color:blue; left:0px; top:0px;}
+}
+
 .copyrights 
 {
     color: #777; 
