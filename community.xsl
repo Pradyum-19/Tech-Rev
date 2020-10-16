@@ -4,7 +4,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/"> 
 <html> 
 <body> 
-<h1 align="center">Job-Host</h1> 
+<h1 align="center">Community Details</h1> 
 <table border="3" align="center"> 
 <tr> 
 	<th>Name</th> 
@@ -12,7 +12,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<th>Experience</th>
 	<th>Working</th> 
 </tr> 
-	<xsl:for-each select="jtypes/jinfo"> 
+	<xsl:for-each select="com/info"> 
 <tr> 
 	<td><xsl:value-of select="name"/></td> 
 	<td><xsl:value-of select="role"/></td> 
