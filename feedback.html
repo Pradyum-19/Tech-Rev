@@ -3,6 +3,40 @@
 <title>Tech-Rev</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+        function validate_feedbackform() 
+        {
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.feedback.reg_email.value)) 
+            {
+                alert("Please enter a valid email address");
+                return (false);
+            }
+
+            var letters = /^[A-Za-z ]+$/;
+            if(!(feedback.name.value.match(letters)))
+            {
+                alert('Please enter a valid name');
+                return false;
+            }
+
+            else
+            {
+                alert("Feedback Submitted Successfully");
+            }
+        }
+ 
+        function isPhoneNumberKey(evt)
+         {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+                (charCode < 48 || charCode > 57)) 
+            {
+                alert("Please enter a valid Phone Number");
+                return false;
+            }
+            return true;
+        }
+</script>
 </head>
 
 <body style="background: url(images/bg.png);">
@@ -15,7 +49,44 @@
 <h1>Feedback</h1>
 </header>
 
-<div class="anim" style="margin-bottom: 530px; margin-left: 400px; margin-top: 200px;">Feedback</div>
+<div class="anim" style="margin-bottom: 250px; margin-left: 400px; margin-top: 200px;">Feedback</div>
+<div class="feedback_form" style="text-align: center;color: white;">
+ <h3>Feedback Form</h3>
+          
+          <form method="post" class="register" action="" name="feedback" onsubmit="return validate_feedbackform();" enctype="multipart/form-data">
+            <p>
+              <p><label for="reg_email">Email Address:</label></p>
+              <input type="email" class="input-text" name="email" id="reg_email"  placeholder="name@example.com" required />
+            </p>           
+            <p><label for="reg_companyname">Name:</label></p>
+              <input type="text" class="input-text" name="name" id="reg_name" minlength="4" placeholder="Full Name" required />
+            </p>
+            <p><label for="reg_gender">Gender:</label></p>
+            <input type="radio" name="gender" value="Male" id="reg_gender" required /> Male
+            <input type="radio" name="gender" value="Female" id="reg_gender" required /> Female
+            </p>
+            <p>
+            <p><label for="reg_contact">Contact No.:</label></p>
+            <input class="input-text" type="text" name="contact" id="reg_contact" minlength="10" maxlength="10" onkeypress="return isPhoneNumberKey(event)" placeholder="1234567890" required//>
+            </p> 
+            <p>
+            <p><label for="reg_location">Location:</label></p>
+                <select name="reg_location" id="reg_location" style="color: black; height: 30px;">
+                <option>Jamshedpur</option>
+                <option>Bangalore</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Kolkata</option>
+                <option>Hyderabad</option>
+                </select>
+            </p>  
+            <p><label for="reg_feedback">Feedback:</label></p>
+            <textarea class="input-text type="text" name="reg_feed" id="reg_feed" placeholder="Feedback Message" required></textarea>
+            </p>
+              <input type="submit" class="button" name="submit" value="Feedback Submit" />
+            </p>         
+          </form>
+      </div>
 
 <footer>
     <p style="color: white;"><b>About</b><p>
