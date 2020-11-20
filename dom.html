@@ -1,0 +1,46 @@
+<html> 
+<body> 
+<h1 align="center">Community Details</h1> 
+
+<table class="center" id="com" style="border-collapse: collapse; text-align:justify; width:1200px;">
+    <script>
+        loadXML();
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","community.xml", true);
+            console.log(xhttp.readyState);
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>Name</th><th>Role</th><th>Experience</th><th>Working</th></tr>";
+            var x=xmlDoc.getElementsByTagName("info");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("role")[0].childNodes[0].nodeValue +
+                "</td><td>"  +
+                x[i].getElementsByTagName("exp")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("working")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("com").innerHTML=t;
+        }
+    </script>
+  </table>
+
+</body> 
+</html> 
