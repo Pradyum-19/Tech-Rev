@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>REVIEW DETAILS</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js">
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <table id="table_1" Border="2px solid black">
+                <tr>
+                    <th>Reviewer</th>
+                    <th>Device</th>
+                </tr>
+                <script>
+                    $(document).ready(function()
+                    {
+                        $.getJSON("review1.json", function(data)
+                        {
+                            var review='';
+                            $.each(data, function(key,value)
+                            {
+                                review+='<tr>';
+                                review+='<td>'+value.Review_Name+'</td>';
+                                review+='<td>'+value.Device+'</td>';
+                                review+='<tr>';                                
+                            });
+                            $('#table_1').append(review);
+                        });
+                    });
+                </script>
+            </table>
+        </div>
+    </body>
+
+</html>
