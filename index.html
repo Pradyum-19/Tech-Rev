@@ -96,7 +96,7 @@
                 var jsondata = JSON.parse(xmlhttp.responseText); //retrieve result as an JavaScript object
                 var review = jsondata.review;
                 var output='<form>';
-                output+='<select id="review_select" onchange="reviewSelect()" > <option>Review</option>';
+                output+='<select id="review_select" onchange="reviewSelect()" > <option>Select an Option</option>';
                 for (var i=0; i < review.length; i++)
                 {
                   output +='<option value="'+i+'">'+review[i].reviewer+'</option>';
