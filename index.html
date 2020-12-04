@@ -78,6 +78,74 @@
             return unescape(document.cookie.substring(offset, endstr));
         }
 
+        function getreview()
+        {
+          var xmlhttp;
+          if (window.XMLHttpRequest)
+          {
+            xmlhttp = new XMLHttpRequest();
+          } 
+          else 
+          {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xmlhttp.onreadystatechange = function()
+          {
+              if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+              {
+                var jsondata = JSON.parse(xmlhttp.responseText); //retrieve result as an JavaScript object
+                var review = jsondata.review;
+                var output='<form>';
+                output+='<select id="review_select" onchange="reviewSelect()" > <option>Review</option>';
+                for (var i=0; i < review.length; i++)
+                {
+                  output +='<option value="'+i+'">'+review[i].title+'</option>';
+                }
+                output+='</select>';
+                output+='</form>';
+                document.getElementById("review_reviewer").innerHTML=output;
+              }
+          }
+          xmlhttp.open("GET","review.json",true);
+          xmlhttp.send();
+        }
+        getreview();
+
+        function reviewSelect()
+        {
+          var selectBox = document.getElementById("review_select");
+          var reviewIndex = selectBox.options[selectBox.selectedIndex].value;
+          getreviewInfo(reviewIndex);
+        }
+
+        function getreviewInfo(i)
+        {
+          var xmlhttp;
+          if (window.XMLHttpRequest)
+          {
+            xmlhttp = new XMLHttpRequest();
+          } 
+          else 
+          {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xmlhttp.onreadystatechange = function()
+          {
+              if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+              {
+                var jsondata = JSON.parse(xmlhttp.responseText); //retrieve result as an JavaScript object
+                var review = jsondata.review;
+                var output='';
+                output+= '<li style="list-style-type: disc;">Type: '+review[i].reviewer+'</li>';
+                output+= '<li style="list-style-type: square;">Location: '+review[i].device+'</li>';
+                document.getElementById("review_info").innerHTML=output;
+              }
+            }
+          xmlhttp.open("GET","review.json",true);
+          xmlhttp.send();
+        }
+
+
 </script>
 </head>
 
@@ -142,6 +210,12 @@
     </div>
   </li>
 </article>
+
+  <h2> Review </h2>
+  <hr>
+  <h4 id="review_reviewer" style="padding-bottom: 10px;"></h4> 
+  <h4 id="review_select" style="margin-left: 30px;"></h4>
+</div>
 
 <footer>
     <p style="color: white;"><b>About</b><p>

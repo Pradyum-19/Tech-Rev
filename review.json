@@ -1,0 +1,17 @@
+{
+    "review": 
+    [
+        {
+            "reviewer": "Pradyum",
+            "device": "Laptop"
+        }
+        {
+            "reviewer": "Adarsh",
+            "device": "Mobile"
+        },
+        {
+            "reviewer": "Harsha",
+            "device": "Speaker"
+        }
+    ]
+}
