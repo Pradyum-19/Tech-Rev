@@ -45,12 +45,12 @@
 		    </form><br>
 	</div>
      
-        <p style="color:white; margin-left: 45px;">Rows to Display: <input type="number" step="1" min="0" max="3" ng-model="rowlimit" style="color:white; width:60px;" /></p>
+        <p style="color:white; margin-left: 45px;">Rows to Display: <input type="number" step="1" min="0" max="3" ng-model="rowlimit" style="color:black; width:60px;" /></p>
         <ul>
         <li ng-repeat="rev in review | limitTo:rowlimit | orderBy: 'title' | filter:Search "><a href="#">>
         <div>
          <h3>{{rev.title}} <span class="review"> {{rev.type | lowercase}}</span></h3>
-          <div>
+          <div style="color:white;">
             <span><i class="glyphicon glyphicon-map-marker"></i> {{rev.location | uppercase}}  </span>&nbsp;&nbsp;
             <span><i class="glyphicon glyphicon-plus"></i> {{rev.pricell | currency:"&#8377;":0 }}-{{rev.priceul}}  </span>
           </div>
