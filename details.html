@@ -36,7 +36,14 @@
     </ul>
   </nav>
 </header>
-
+<div>
+  <div>
+			<br><form action="#" method="get">
+				<input type="text" placeholder="Job Title or Company Name" name="jsearch_1" ng-model="Search" value=""/>
+			    <button type="submit" name="submit_1" class="glyphicon"><i class="glyphicon glyphicon-search"></i></button>
+		    </form><br>
+	</div>
+     
         <p style="color:white; margin-left: 45px;">Rows to Display: <input type="number" step="1" min="0" max="3" ng-model="rowlimit" style="color:black; width:60px;" /></p>
         <ul>
         <li ng-repeat="rev in review | limitTo:rowlimit | orderBy: 'title' | filter:Search "><a href="#">>
@@ -51,7 +58,7 @@
         </a>
         </li>
       </ul>
-
+  </div>
 <footer>
     <p style="color: white;"><b>About</b><p>
        We help you find the Best!<br>
