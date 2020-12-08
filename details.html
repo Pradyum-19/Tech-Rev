@@ -45,7 +45,7 @@
 		    </form><br>
 	</div>
      
-        <p style="color:white; margin-left: 45px;">Rows to Display: <input type="number" step="1" min="0" max="3" ng-model="rowlimit" style="color:black; width:60px;" /></p>
+        <p style="color:white; margin-left: 45px;">Rows to Display: <input type="number" step="1" min="0" max="3" ng-model="rowlimit" style="color:white; width:60px;" /></p>
         <ul>
         <li ng-repeat="rev in review | limitTo:rowlimit | orderBy: 'title' | filter:Search "><a href="#">>
         <div>
