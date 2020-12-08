@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="js/angular.min.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
-<script src="js/singlepage.js"></script>
+<script src="js/filter_app.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
@@ -48,7 +48,7 @@
         <ul>
         <li ng-repeat="rev in review | limitTo:rowlimit | orderBy: 'title' | filter:Search "><a href="#">>
         <div>
-         <h3>{{rev.title}} <span class="part-time"> {{rev.type | lowercase}}</span></h3>
+         <h3>{{rev.title}} <span class="review"> {{rev.type | lowercase}}</span></h3>
           <div>
             <span><i class="glyphicon glyphicon-map-marker"></i> {{rev.location | uppercase}}  </span>&nbsp;&nbsp;
             <span><i class="glyphicon glyphicon-plus"></i> {{rev.pricell | currency:"&#8377;":0 }}-{{rev.priceul}}  </span>
